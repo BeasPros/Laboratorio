@@ -1,0 +1,143 @@
+/* Reseteamos valores por defecto de los márgenes y espaciado */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Asignamos las variables de los colores empleados en la página */
+:root {
+    --Gris-Claro: #53545f;
+    --Azul-Oscuro: #2f3144;
+    --Azul-Grisaceo: #adb5c0;
+    --Morado: #645cc7;
+    --Morado-Sombra: #55509785;
+    --Azul-Claro: #41445c;
+    --Azul-Sombra: #262736;
+    --BlancoApagado: #e3eaf0;
+    --Negro: #000000;
+    --Rojo: #f71111;
+    --Verde: #28b228;
+
+
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--Azul-Oscuro);
+    color: var(--Azul-Grisaceo);
+
+}
+
+.main-container {
+    background-color: var(--Azul-Claro);
+    /*los bordes de guia*/
+    border: 1px solid var(--Gris-Claro);
+    border-radius: 5px;
+    box-shadow: var(--Azul-Sombra) 0.2em 0.2em 0.3em;
+    width: 400px;
+    height: 600px;
+    margin: 20px auto 20px;
+    padding: 10px 40px;
+
+}
+
+h1 {
+    width: 190px;
+    line-height: 60px;
+    margin: 20px auto 5px;
+    font-size: 1.5em;
+    font-weight: 630;
+    text-align: center;
+    text-shadow: var(--Azul-Sombra) 0.1em 0.1em 0.1em;
+
+}
+
+label {
+    width: 100px;
+    line-height: 10px;
+    margin: 1px;
+    padding-bottom: 5px;
+    font-size: 0.9em;
+    font-weight: 600;
+    font-style: normal;
+    text-shadow: var(--Azul-Sombra) 0.1em 0.1em 0.1em;
+}
+
+.form-container {
+    padding: -5px;
+
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid var(--Negro);
+    font-weight: 470;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/* Estilos para el botón del formulario */
+.btn-submit:enabled {
+    background-color: var(--Morado);
+    color: var(--BlancoApagado);
+    text-shadow: 0.01em, 0.1em, 0.1em var(--Negro);
+    border: 1px solid var(--Negro);
+    box-shadow: 0.2em 0.2em 0.3em var(--Morado-Sombra);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.btn-submit:disabled {
+    color: var(--BlancoApagado);
+    text-shadow: 0.01em, 0.1em, 0.1em var(--Negro);
+    border: 1px solid var(--Negro);
+    box-shadow: 0.2em 0.2em 0.3em var(--Morado-Sombra);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+/* Estilos para el cursor en función de la validez del formulario */
+.btn-submit:hover:disabled {
+    cursor: not-allowed;
+}
+
+.btn-submit:hover:enabled {
+    cursor: pointer;
+}
+
+
+.invalid {
+    border: 3px solid var(--Rojo);
+    background-image: url("./images/error-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center right 1em;
+}
+
+.valid {
+    border: 3.5px solid var(--Verde);
+    background-image: url("./images/success-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center right 1em;
+}
+
+.error {
+    color: var(--Rojo);
+    text-align: left;
+    position: 70em;
+    font-size: 15px;
+    margin: -18px 0 -18px;
+}
+
+.form-group {
+    margin-top: 2em;
+}
